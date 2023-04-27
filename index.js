@@ -1,61 +1,5 @@
 const inquirer = require("inquirer");
-const fs = require("fs");
-
-let choice1 = {
-  name: "Apache 2.0 License",
-  value:
-    "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
-};
-
-let choice2 = {
-  name: "Boost Software License 1.0",
-  value:
-    "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
-};
-let choice3 = {
-  name: "BSD 3-Clause License",
-  value:
-    "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
-};
-let choice4 = {
-  name: "BSD 2-Clause License",
-  value:
-    "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)",
-};
-
-
-// [ choice1, choice2, choice3, choice4]
-
-
-
-//////////////////////////////////////////////////
-
-// [
-//     {
-//       name: "BSD 2-Clause License",
-//       value:
-//         "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)",
-//     },
-//     {
-//       name: "BSD 3-Clause License",
-//       value:
-//         "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
-//     },
-//     {
-//       name: "Boost Software License 1.0",
-//       value:
-//         "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
-//     },
-//     {
-//       name: "Apache 2.0 License",
-//       value:
-//         "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
-//     },
-//   ],
-
-
-///////////////////////////////////////////////
-
+const fs = require("fs"); 
 
 
 inquirer
@@ -143,8 +87,10 @@ inquirer
     let readMeResponse = generateReadMe(response);
     fs.writeFile("README.md", readMeResponse, (err) =>
       err ? console.error(err) : console.log("Commit logged!")
-    );
-    console.log(response)
+    ); 
+
+//     references to use 
+// // ## ![Full Page Screenshot](./assets/images/1682008205626.png)
   });
 
 const generateReadMe = ({
@@ -162,19 +108,18 @@ const generateReadMe = ({
 ${license.badge}
 
 
-references to use 
-// ## ![Full Page Screenshot](./assets/images/1682008205626.png)
+ 
 
 
 ##  Table of Contents  
 
-1. [Description] (#desc)
-2. [Installation] (#install)
-3. [Usage] (#usage)
-4. [License] (#license) 
-5. [Contributions] (#contributions)
-6. [Testing] (#testing)
-7. [Questions] (#questions) 
+1. [Description](#desc)
+2. [Installation](#install)
+3. [Usage](#usage)
+4. [License](#license) 
+5. [Contributions](#contributions)
+6. [Testing](#testing)
+7. [Questions](#questions) 
 
 <a name="desc"></a>
 ## 1. Descrption
