@@ -50,5 +50,4 @@ aaefvaesv
 ## 7. Questions 
 
 Feel free to browse my github profile here @ https://github.com/Ki
-If you have any questions, reach me at my email here, rxs.
-
+If you have any questions, reach me at my email here, rxs. 
