@@ -1,66 +1,157 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 
+let choice1 = {
+  name: "Apache 2.0 License",
+  value:
+    "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+};
+
+let choice2 = {
+  name: "Boost Software License 1.0",
+  value:
+    "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
+};
+let choice3 = {
+  name: "BSD 3-Clause License",
+  value:
+    "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
+};
+let choice4 = {
+  name: "BSD 2-Clause License",
+  value:
+    "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)",
+};
+
+
+// [ choice1, choice2, choice3, choice4]
+
+
+
+//////////////////////////////////////////////////
+
+// [
+//     {
+//       name: "BSD 2-Clause License",
+//       value:
+//         "[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)",
+//     },
+//     {
+//       name: "BSD 3-Clause License",
+//       value:
+//         "[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
+//     },
+//     {
+//       name: "Boost Software License 1.0",
+//       value:
+//         "[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
+//     },
+//     {
+//       name: "Apache 2.0 License",
+//       value:
+//         "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+//     },
+//   ],
+
+
+///////////////////////////////////////////////
+
+
+
 inquirer
   .prompt([
     {
       type: "input",
-      message: " ?",
+      message: "What is your GitHub username?",
       name: "username",
     },
     {
       type: "input",
-      message: "Where do you live?",
-      name: "location",
+      message: "What is your email?",
+      name: "email",
     },
     {
       type: "input",
-      message: "Tell me a little about yourself.",
-      name: "bio",
+      message: "What would you like your title of your ReadMe to be?",
+      name: "title",
     },
     {
       type: "input",
-      message: "Tell me a little about yourself.",
-      name: "bio",
+      message:
+        "Could you please give a quick description on how your application works?",
+      name: "description",
     },
     {
       type: "input",
-      message: "Tell me a little about yourself.",
-      name: "bio",
+      message: "Are there any installation instructions?",
+      name: "installation",
     },
     {
       type: "input",
-      message: "Tell me a little about yourself.",
-      name: "bio",
+      message: "Have any 'Usage' information you would like to add?",
+      name: "usage",
+    },
+    {
+      type: "list",
+      message: "What license applies here?",
+      name: "license",
+      choices: [
+        {
+          name: "BSD 2-Clause License",
+          value:{
+            name: "BSD 2-Clause License",
+            badge:"[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)",
+          }
+ 
+        },
+        {
+          name: "BSD 3-Clause License",
+          value: {
+            name: "BSD 3-Clause License",
+            badge:"[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)",
+          }
+        },
+        {
+          name: "Boost Software License 1.0",
+          value:{
+            name: "Boost Software License 1.0",
+           badge:"[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)",
+          }
+        },
+        {
+          name: "Apache 2.0 License",
+          value:
+          {
+            name: "Apache 2.0 License",
+            badge:"[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)",
+          }
+        },
+      ],
     },
     {
       type: "input",
-      message: "Tell me a little about yourself.",
-      name: "bio",
+      message: "Any contribution guidelines?",
+      name: "contribution",
     },
     {
       type: "input",
-      message: "Tell me a little about yourself.",
-      name: "bio",
-    },
-    {
-      type: "input",
-      message: "Tell me a little about yourself.",
-      name: "bio",
+      message: "Lastly, any testing instructions?",
+      name: "testInstruct",
     },
   ])
   .then((response) => {
-    let htmlResponse = generateReadMe(response);
-    fs.writeFile("README.md", htmlResponse, (err) =>
+    let readMeResponse = generateReadMe(response);
+    fs.writeFile("README.md", readMeResponse, (err) =>
       err ? console.error(err) : console.log("Commit logged!")
     );
+    console.log(response)
   });
 
 const generateReadMe = ({
   username,
   email,
   title,
-  desciption,
+  description,
   installation,
   usage,
   license,
@@ -68,7 +159,7 @@ const generateReadMe = ({
   testInstruct,
 }) =>
   `#                             ${title}
-${license.image}
+${license.badge}
 
 
 references to use 
@@ -88,7 +179,7 @@ references to use
 <a name="desc"></a>
 ## 1. Descrption
 
-${desciption}
+${description} 
 
 <a name="install"></a>
 ## Insallation
@@ -102,7 +193,7 @@ ${usage}
 <a name="license"></a>
 ## License  
 
-${license.info}
+${license.name}
 
  
 <a name="contributions"></a>
