@@ -8,13 +8,13 @@ references to use
 
 ##  Table of Contents  
 
-1. [Description] (#desc)
-2. [Installation] (#install)
-3. [Usage] (#usage)
-4. [License] (#license) 
-5. [Contributions] (#contributions)
-6. [Testing] (#testing)
-7. [Questions] (#questions) 
+1. [Description](#desc)
+2. [Installation](#install)
+3. [Usage](#usage)
+4. [License](#license) 
+5. [Contributions](#contributions)
+6. [Testing](#testing)
+7. [Questions](#questions) 
 
 <a name="desc"></a>
 ## 1. Descrption
