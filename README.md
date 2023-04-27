@@ -1,5 +1,5 @@
-#                             elkadjf
-[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+#                             My ReadMe Generator
+[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)](https://www.boost.org/LICENSE_1_0.txt)
 
 
 references to use 
@@ -8,46 +8,47 @@ references to use
 
 ##  Table of Contents  
 
-1. [Description](#desc)
-2. [Installation](#install)
-3. [Usage](#usage)
-4. [License](#license) 
-5. [Contributions](#contributions)
-6. [Testing](#testing)
-7. [Questions](#questions) 
+1. [Description] (#desc)
+2. [Installation] (#install)
+3. [Usage] (#usage)
+4. [License] (#license) 
+5. [Contributions] (#contributions)
+6. [Testing] (#testing)
+7. [Questions] (#questions) 
 
 <a name="desc"></a>
 ## 1. Descrption
 
-lksadjfalsdjf asdkjf asdfasdlk fjals;df jal;skdj f;lasdk jfdsa 
+This application dynamically generates a README File!!!! 
 
 <a name="install"></a>
-## 2. Insallation
-alskdfjlasdfj asd
+## Insallation
+No installation required other than Node use
 
 <a name="usage"></a>
 ## 3. Usage Information
 
-alskdfjals;dkf j
+None
 
 <a name="license"></a>
-## 4. License  
+## License  
 
-Apache 2.0 License
+Boost Software License 1.0
 
  
 <a name="contributions"></a>
-## 5. Contributions 
+## Contributions 
 
-asdfasdf
+None really
 
 <a name="testing"></a>
-## 6. Tests
+## Tests
 
-aaefvaesv
+None again lol
 
 <a name="questions"></a>
-## 7. Questions 
+## Questions 
 
-Feel free to browse my github profile here @ https://github.com/Ki
-If you have any questions, reach me at my email here, rxs. 
+Feel free to browse my github profile here @ https://github.com/rxs291
+If you have any questions, reach me at my email here, rxs291@yahoo.com.
+
